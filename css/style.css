@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Formatação geral */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+/* Tela do game */
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.clouds {  /* Movimentos das nuvens */
+    position: absolute;
+    width: 550px;
+    animation: clounds-animation 20s infinite linear;
+}
+
+.pipe {  /* Movimentos dos tubos */
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 2s infinite linear;
+}
+
+
+/* Configurações do Mario */
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-in-out;
+} /* Fim das configurações */
+
+
+/* Formatações de textos e imagens quando o usuário perder */
+.perder {
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    color: red;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: 'Press Start 2P', cursive;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.perder img {
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+.repetir {
+    cursor: pointer;
+}  /* Fim das formatações */
+
+
+.pontos {  /* Formatação dos pontos */
+    font-family: 'Roboto Mono', monospace;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    font-size: x-large;
+}
+
+.scoreFinal {
+    margin-right: 50px;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: rgb(6, 6, 6);
+}
+
+
+/* Animações de pulos, tubos e nuvens*/
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clounds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}

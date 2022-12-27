@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <title>Mario Jump</title>
+</head>
+<body>
+
+    <!-- Cenário onde o game irá iniciar -->
+    <div class="game-board">
+        <img src="./images/clouds.png" class="clouds">
+        <img src="./images/mario.gif" alt="gif do Mário" class="mario" >
+        <img src="./images/pipe.png" alt="imagem pipe" class="pipe">
+    </div>
+
+    <!-- Game Over -->
+    <div class="perder">
+        <h1>Game Over!</h1>
+        <p class="scoreFinal"></p>
+        <a href="./index.html"> <img src="./images/repeat.png" class="repetir" alt="foto para repetir"> </a>
+        <a href="https://google.com"> <img src="./images/cancel.png" alt="sair"> </a>
+    </div>
+
+    <!-- Score -->
+    <div class="pontos">
+        <p>Score: </p>
+    </div>
+
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
